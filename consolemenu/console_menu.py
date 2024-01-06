@@ -412,7 +412,7 @@ class MenuItem(object):
     A generic menu item
     """
 
-    def __init__(self, text, menu=None, should_exit=False, menu_char=None):
+    def __init__(self, text, menu=None, should_exit=False, menu_char=None, index_item_separator=" - "):
         """
         :ivar str text: The text shown for this menu item
         :ivar ConsoleMenu menu: The menu to which this item belongs
@@ -422,7 +422,7 @@ class MenuItem(object):
         self.text = text
         self.menu = menu
         self.should_exit = should_exit
-        self.index_item_separator = " - "
+        self.index_item_separator = index_item_separator
         self.menu_char = menu_char
 
     def __str__(self):
